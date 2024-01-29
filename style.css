@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    display: flex;
+    height: 55px;
+    background-color: #FC6736;
+    align-items: center;
+    font-size: 28px;
+    padding: 0 10px;
+    /* font-family: 'Kaushan Script', cursive; */
+    font-family: 'Montserrat', sans-serif;
+}
+nav ul li{
+    font-weight: bold;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: sans-serif;
+    
+
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+.box{
+    border: 2px solid black;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0C2D57;
+}
+.box:hover{
+    background-color: #e2efff;
+    cursor: pointer;
+}
+.gameinfo{
+    padding: 15px 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+.gameinfo h1{
+    margin-bottom: 20px;
+}
+.imgbox img{
+    /* height: 150px; */
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 0;
+    transition: 1s ease-in-out;
+}
+.info{
+    font-size: 22px;
+}
+#reset{
+    margin: 15px 30px;
+    padding: 9px 22px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #0C2D57;
+    background-color: #FC6736;
+    cursor: pointer;
+    font-weight: bold;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.line{
+    height: 3px;
+    width: 0;
+    background-color: #FC6736;
+    transition: width 1s ease-in-out;
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 700px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    
+    .gameinfo h1{
+        font-size: 25px;
+    }
+    .container{
+        grid-template-rows: repeat(3, 15vw);
+        grid-template-columns: repeat(3, 15vw);
+    }
+    .box{
+        font-size: 9vw;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .gameinfo{
+        margin-top: 30px;
+    }
+    .container{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .box{
+        font-size: 11vw;
+    }
+    .gameinfo h1{
+        font-size: 25px;
+    }
+    .info{
+        font-size: 23px;
+    }
+    #reset{
+        margin: 10px 22px;
+        padding: 8px 17px;
+    }
+    
+  }
